@@ -8,11 +8,11 @@ public class MonsterEncount {
 	 public static void playerGame(Player player,Random rdm) {
 		 	
 	        Scanner sc = new Scanner(System.in);
-	        boolean tour2 = true;
+	        boolean tour = true;
 	        int diceEncounter = 8;
 	        int diceKind = 5;
 
-	        while (tour2) {
+	        while (tour) {
 	            System.out.printf(
 	                    player.getName() + " 님은 모험의 여행을 떠났습니다. \n" + "1 을 선택하시면, 계속 앞으로 나아갑니다." + "2 를 선택하시면, 휴식을 취합니다.");
 	            int tourFlag = sc.nextInt();
