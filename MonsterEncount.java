@@ -5,9 +5,9 @@ import java.util.Scanner;
 
 public class MonsterEncount {
 	Random rdm = new Random();
-	 public static void playerGame(Player player,Random rdm) {
+	public static void playerGame(Player player,Random rdm) {
 		 	
-        Scanner sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
         boolean tour = true;
         int diceEncounter = 8;
         int diceKind = 5;
@@ -25,7 +25,8 @@ public class MonsterEncount {
                     System.out.println("-----------------------------------------------------");
                     System.out.println("아무 것도 없습니다. 계속 여행을 떠납니다.");
                 } else {
-                    Monster monster = createMonster(rdm, diceKind);
+                	MonsterRan mo = new MonsterRan();
+                    Monster monster = mo.createMonster();
                     System.out.println("-----------------------------------------------------");
 					System.out.printf("몬스터가 있는 것 같습니다. \n" 
 									+ "주사위를 굴립니다. \n");
@@ -33,6 +34,7 @@ public class MonsterEncount {
                     System.out.println(monster.getWeaponName() + " 으로 무장한  " + monster.getName() + "입니다.");
                     System.out.println("hp:"+monster.getHp());
                     System.out.println("str:"+monster.getStr());
+                    System.out.println("attack:"+monster.getWeaponDice());
                     System.out.println("dex:"+monster.getDex());
                     System.out.println("level:"+monster.getLevel());
                 }
@@ -43,22 +45,5 @@ public class MonsterEncount {
             }
         }
     }
-	 public static Monster createMonster(Random rdm, int diceKind) {
-        int monsterKind = rdm.nextInt(diceKind) + 1;
 
-        switch (monsterKind) {
-            case 1:
-                return new Monster("Kobold", 100, "Dangger", 4, 10, 8, 1);
-            case 2:
-                return new Monster("Ork", 150, "Stick", 6, 14, 7, 2);
-            case 3:
-                return new Monster("Ork leader", 200, "Mace", 8, 15, 9, 3);
-            case 4:
-                return new Monster("Ogre", 300, "Stick", 6, 18, 10, 4);
-            case 5:
-                return new Monster("Fallen knight", 200, "Bastard Sword", 8, 18, 12, 5);
-            default:
-                return null;
-        }
-    }
 }

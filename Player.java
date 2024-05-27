@@ -1,5 +1,8 @@
 package Practice.game;
 
+import lombok.Getter;
+
+@Getter
 public class Player {
     private String name;
     private int job;
@@ -19,38 +22,6 @@ public class Player {
         this.hp = hp;
         this.str = str;
         this.dex = dex;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getJob() {
-        return job;
-    }
-
-    public int getLevel() {
-        return level;
-    }
-
-    public int getHp() {
-        return hp;
-    }
-
-    public String getWeaponName() {
-        return weaponName;
-    }
-
-    public int getWeaponDice() {
-        return weaponDice;
-    }
-
-    public int getStr() {
-        return str;
-    }
-
-    public int getDex() {
-        return dex;
     }
 
     public void newStats (int diceSum) {

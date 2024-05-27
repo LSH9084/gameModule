@@ -1,49 +1,31 @@
 package Practice.game;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@ToString
 public class Monster {
-    private String name;
-    private int hp;
-    private String weaponName;
+    private String name; 
+    private int hp; 
+    private String weaponName; 
     private int weaponDice;
     private int str;
     private int dex;
     private int level;
 
-    public Monster(String name, int hp, String weaponName, int weaponDice, int str, int dex, int level) {
-        this.name = name;
-        this.hp = hp;
-        this.weaponName = weaponName;
-        this.weaponDice = weaponDice;
-        this.str = str;
-        this.dex = dex;
-        this.level = level;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getHp() {
-        return hp;
-    }
-
-    public String getWeaponName() {
-        return weaponName;
-    }
-
-    public int getWeaponDice() {
-        return weaponDice;
-    }
-
-    public int getStr() {
-        return str;
-    }
-
-    public int getDex() {
-        return dex;
-    }
-
-    public int getLevel() {
-        return level;
-    }
+//    public Monster(String d, int f, String g, int h, int str, int dex, int level) {
+//        this.name = d;
+//        this.hp = f;
+//        this.weaponName = g;
+//        this.weaponDice = h;
+//        this.str = str;
+//        this.dex = dex;
+//        this.level = level;
+//    }
 }
